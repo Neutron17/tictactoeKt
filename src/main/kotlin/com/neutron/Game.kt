@@ -21,10 +21,7 @@ class Game {
         val x = possibleOpts.random()
         try {
             move(x, compIcon)
-        }catch(e: IndexOutOfBoundsException) {
-            computerTurn()
-            return
-        }catch(e: AlreadyUsedException) {
+        }catch(e: Exception) {
             computerTurn()
             return
         }

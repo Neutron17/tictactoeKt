@@ -1,7 +1,5 @@
 package com.neutron
 
-import kotlin.system.exitProcess
-
 class Main {
     companion object {
         @JvmStatic
