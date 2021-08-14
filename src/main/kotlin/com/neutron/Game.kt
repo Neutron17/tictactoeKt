@@ -58,13 +58,19 @@ class Game {
         if( ((board[0][0] == userIcon && board[0][1] == userIcon && board[0][2] == userIcon) ||
             (board[1][0] == userIcon && board[1][1] == userIcon && board[1][2] == userIcon)  ||
             (board[2][0] == userIcon && board[2][1] == userIcon && board[2][2] == userIcon)) ||
-            (board[0][0] == userIcon && board[1][1] == userIcon && board[2][2] == userIcon)) {
+            (board[0][0] == userIcon && board[1][1] == userIcon && board[2][2] == userIcon)  ||
+            (board[0][0] == userIcon && board[1][0] == userIcon && board[2][0] == userIcon)  ||
+            (board[0][1] == userIcon && board[1][1] == userIcon && board[2][1] == userIcon)  ||
+            (board[0][2] == userIcon && board[1][2] == userIcon && board[2][2] == userIcon)) {
             winner = Winner.User
             return true
-        }else if(   ((board[0][0] == compIcon && board[0][1] == compIcon && board[0][2] == compIcon) ||
+        }else if(  ((board[0][0] == compIcon && board[0][1] == compIcon && board[0][2] == compIcon) ||
                     (board[1][0] == compIcon && board[1][1] == compIcon && board[1][2] == compIcon)  ||
                     (board[2][0] == compIcon && board[2][1] == compIcon && board[3][2] == compIcon)) ||
-                    (board[0][0] == compIcon && board[1][1] == compIcon && board[2][2] == compIcon)) {
+                    (board[0][0] == compIcon && board[1][1] == compIcon && board[2][2] == compIcon)  ||
+                    (board[0][0] == compIcon && board[1][0] == compIcon && board[2][0] == compIcon)  ||
+                    (board[0][1] == compIcon && board[1][1] == compIcon && board[2][1] == compIcon)  ||
+                    (board[0][2] == compIcon && board[1][2] == compIcon && board[2][2] == compIcon)) {
             winner = Winner.Computer
             return true
         }
